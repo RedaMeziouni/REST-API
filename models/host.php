@@ -31,6 +31,12 @@ class Post {
         FROM ' . $this->table . ' p LEFT JOIN categories c ON p.category_id = c.id 
         ORDER BY p.created_at DESC';
 
+        // Create the Prepapred Statement
+        $stmt = $this->conn->prepare($query);
 
+        // Execute the query
+        $stmt->execute();
+
+        return $stmt;
     }
 }
