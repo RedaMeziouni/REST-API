@@ -5,7 +5,7 @@ header('Content-Type: application/json'); //Accept JSON
 
 // Including the DB
 include_once('../../config/Database.php');
-include_once('../../models/host.php');
+include_once('../../models/Post.php');
 
 // Instantiate DB and Connect to it
 $databse = new Database();
